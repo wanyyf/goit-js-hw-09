@@ -15,6 +15,7 @@ const onStartBtnClick = () => {
 
 const onStopBtnClick = () => {
   clearInterval(changeColor);
+  startBtnEl.disabled = false;
 };
 
 startBtnEl.addEventListener('click', onStartBtnClick);
