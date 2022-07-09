@@ -21,6 +21,8 @@ const onStartBtnClick = () => {
   setInterval(() => {
     const chooseData = new Date(inputEl.value);
     const timeLeft = chooseData - Date.now();
+    if (timeLeft <= 0) return;
+    console.log(timeLeft);
     convertMs(timeLeft);
     addTextValue(convertMs(timeLeft));
   }, 1000);
